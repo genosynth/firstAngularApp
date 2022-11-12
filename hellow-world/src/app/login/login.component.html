@@ -1,0 +1,12 @@
+<h2>Log In</h2>
+
+<form #logInForm="ngForm" (ngSubmit)="login(logInForm)">
+    <label>Username</label>
+    <input required type="text" name="username" ngModel>
+    <label>Password</label>
+    <input required type="password" name="password" ngModel>
+    <button type="submit">Log In</button>
+
+</form>
+
+<a href="/reg">Go To Register Page</a>

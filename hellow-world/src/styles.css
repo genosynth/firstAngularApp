@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    background-color: rgb(190, 81, 81);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width:25%;
+    border: solid black 1px;
+    padding: 2%;
+    border-radius: 5px;
+}
