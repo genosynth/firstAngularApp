@@ -1,0 +1,15 @@
+tr {
+    display: flex;
+   font-size: 10px;
+
+}
+
+tr h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+tr h1 a:hover  {
+    
+    color: rgba(255, 255, 255, 0.726);
+}

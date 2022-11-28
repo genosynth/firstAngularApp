@@ -1,12 +1,9 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router,Route, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
+//import jwt_decode from 'jwt-decode';
 
-const loggedInUser = {
-  id: '1zx-casd123-asdzxc132',
-  name: 'Lakindu Hewawasam',
-  role: 'customer'
- }
+
 
 @Injectable({
   providedIn: 'root'
@@ -25,18 +22,32 @@ export class AuthGuard implements CanActivate {
       
       // provides the path of the route.
       const { path } = routeConfig as Route; 
-      
-      if (path?.includes('dashboard') && localStorage.getItem("angular") ) {
-      // if user is administrator and is trying to access admin routes, allow access.
+
+      let token:any = localStorage.getItem("angular") 
+      //let decoded:any = JSON.stringify(jwt_decode(token)) || null
+       
+      if (path?.includes('dashboard') && token) {
+     
    
         return true;
       }
+
+      if (path?.includes('profiles') && token) {
+        
+     
+          return true;
+        }
      
       // for any other condition, navigate to the forbidden route.
 
-     this.router.navigateByUrl('/');    
+     this.router.navigateByUrl('/login');    
+     
       return false;
 
+
+     
   }
+
+  
   
 }

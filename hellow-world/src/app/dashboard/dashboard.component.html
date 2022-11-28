@@ -1,5 +1,15 @@
-<h2>Welcome {{user}}</h2>
-
+<h2>Welcome {{username}}</h2>
 <form  (ngSubmit)="logOut()">
     <button type="submit">Log Out</button>
 </form>
+
+<form  (ngSubmit)="deleteAccount()">
+    <button type="submit">Delete Account</button>
+</form>
+<div>
+
+    
+
+    <app-list-users></app-list-users>
+</div>
+

@@ -1,6 +1,15 @@
-<h1>Angular Log In/Register Page</h1>
-<a href="/dashboard">Protected Page</a>
-{{logged}}
+<div class="nav-bar">  
+    <h1>Angular Log In/Register Page</h1>
+
+    <ul>
+        <li><a href="/reg">Register</a></li>
+        <li><a href="/login">Log In</a></li>
+        <li><a href="/dashboard">Protected Page</a></li>
+    </ul>
+   
+ - Status : {{loggedStatus}}
+
+</div>
 <router-outlet></router-outlet>
 
 

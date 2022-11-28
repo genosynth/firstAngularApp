@@ -1,0 +1,7 @@
+<h3 >All registered users</h3>
+<tr *ngFor=" user of users  let i = index; trackBy: trackByFunc" >
+    
+        <h1><a href="/profiles" >{{users[i].username}}</a></h1>
+ 
+
+</tr>

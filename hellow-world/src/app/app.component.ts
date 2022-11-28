@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import jwt_decode from "jwt-decode"
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Log In/Register Page';  
-  logged = " Logged in as " +(localStorage.getItem("angular") || "");
+  token:any = localStorage.getItem("angular") || "none"
+  //decoded:any = jwt_decode(this.token)  || ""
+  loggedStatus =  this.getStatus(this.token)
+
+  getStatus(token: any): any {
+    return token !=="none"  ? 'Logged in' : 'Not Logged in';
+ }
     
  }

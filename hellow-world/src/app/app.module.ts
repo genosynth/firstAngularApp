@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ListUsersComponent } from './list-users/list-users.component';
+import { ProfilesComponent } from './profiles/profiles.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    ListUsersComponent,
+    ProfilesComponent
     
 
   ],
