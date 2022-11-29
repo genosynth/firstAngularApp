@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Router } from '@angular/router';
 
 import {NgForm} from '@angular/forms'
 
@@ -12,7 +12,7 @@ import {NgForm} from '@angular/forms'
 export class RegisterComponent implements OnInit {
 
   
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -28,6 +28,7 @@ export class RegisterComponent implements OnInit {
     })
     
     registrationForm.reset()
+    this.router.navigate(['/login'])
 
   }
 

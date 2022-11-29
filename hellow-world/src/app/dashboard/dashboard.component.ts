@@ -39,11 +39,13 @@ export class DashboardComponent implements OnInit {
   }
 
   deleteAccount(){
+   
     if(window.confirm("Are you sure you want to delete account?")){
-      this.http.post('http://localhost:3070/api/delete',this.username)
+      this.http.post('http://localhost:3070/api/delete',{username:this.username})
     .subscribe((res)=>{
       console.log(res)   
-       alert(res)    
+      window.alert(res)  
+      this.logOut()
 
     })
     }

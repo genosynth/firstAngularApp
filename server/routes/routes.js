@@ -19,9 +19,10 @@ router.get('/api/users', async(req,res)=>{
 
 router.post('/api/delete', async(req,res)=>{
     let username = req.body.username
-    const userToDelete = await userReg.findOneAndRemove({username})
-    userToDelete.save()
-    res.send("Account has been deleted successfully.")
+  
+    const userToDelete = await userReg.findOneAndDelete({username})
+    //console.log(userToDelete)
+    res.json("Account has been deleted successfully. You will now be logged out.")
     
 })
 
